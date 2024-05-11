@@ -1,0 +1,29 @@
+@startuml Stickman
+
+class Juego
+class Jugador
+class IA
+class Pistola
+class Arena
+class Oponente
+class Muro
+class Bala
+class Estela
+class Muerte
+
+Pistola o-- Arena
+Jugador o-- Pistola
+Oponente o-- Pistola
+
+Juego o-- Jugador
+IA o-- Oponente
+
+Pistola *-- Estela
+Arena *-- Muro
+
+Pistola --|> Colisionable
+Muerte --|> Colisionable
+Estela --|> Colisionable
+
+
+@enduml
